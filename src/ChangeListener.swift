@@ -57,7 +57,7 @@ public class Change <T:Any> : CustomStringConvertible {
   }
 }
 
-class ChangeListener <T:Any> : Listener {
+public class ChangeListener <T:Any> : Listener {
 
   let keyPath: String
 
@@ -102,7 +102,7 @@ class ChangeListener <T:Any> : Listener {
     ChangeListenerCache[keyPath] = targets.nilIfEmpty
   }
 
-  init (_ once: Bool, _ object: NSObject, _ keyPath: String, _ options: NSKeyValueObservingOptions, _ handler: Change<T> -> Void) {
+  public init (_ once: Bool, _ object: NSObject, _ keyPath: String, _ options: NSKeyValueObservingOptions, _ handler: Change<T> -> Void) {
     self.object = object
     self.keyPath = keyPath
     self.options = options
